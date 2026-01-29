@@ -1,20 +1,24 @@
 #include <iostream>
 using namespace std;
 
-void checkEvenOdd(int num) {
-    if (num % 2 == 0) {
-        cout << "Even number" << endl;
+void checkEvenOdd(int num){
+    if (num % 2 == 0){
+        cout << num << " is an even number." << endl;
     } else {
-        cout << "Odd number" << endl;
+        cout << num << " is an odd number." << endl; 
     }
 }
 
-int main() {
+int main(){
     int number;
-    cout << "Enter a number: ";
-    cin >> number;
 
-    checkEvenOdd(number);
+    cout << "Enter an integer: " << endl;
+    if (!(cin >>  number)){
+        cout << "ERROR: Please enter a valid integer." << endl;
+         return 0;
+    }
+
+    checkEvenOdd(number)
 
     return 0;
 }
